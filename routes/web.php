@@ -24,7 +24,7 @@ Route::get('admin/logout','AdminController@getLogout');
 
 // FRONT END
 Route::get('/','frontController@showDanhmuc');
-Route::get('/detail/{sanpham}','frontController@showSanpham');
+Route::get('/info/{sanpham}','frontController@showSanpham');
 
 
 
