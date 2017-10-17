@@ -6,7 +6,7 @@
   		<li><a href="/">{{$danhmuc->tendanhmuc}}</a>
 			<ul>
 				@foreach($danhmuc->listsanpham() as $sanpham)
-					<li><a href="#">{{$sanpham->tensanpham}}</a></li>
+					<li><a href="">{{$sanpham->tensanpham}}</a></li>
 				@endforeach	
 			</ul>
   		</li>
