@@ -12,6 +12,14 @@
 */
 	
 Auth::routes();
+Route::get('admin/login','Admin\AuthController@getLogin');
+Route::post('admin/login','Admin\AuthController@postLogin');
+Route::get('admin/register','Admin\AuthController@getRegister');
+Route::post('admin/register','Admin\AuthController@postRegister');
+
+Route::get('admin/dashboard','AdminController@getIndex');
+Route::get('admin/logout','AdminController@getLogout');
+
 
 
 // FRONT END
@@ -31,3 +39,7 @@ Route::get('/addDanhmuc',function(){
 Route::post('sanpham', ['as' => 'sanpham', 'uses'=>'Controller@addSanpham']);
 Route::post('danhmuc', ['as' => 'danhmuc', 'uses'=>'Controller@addDanhmuc']);
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

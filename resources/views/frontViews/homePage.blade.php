@@ -1,8 +1,17 @@
 @extends('layout')
 
 @section('content')
-	@foreach($danhmuc as $dm)
-		<h2>{{$dm->tendanhmuc}}</h2>
-	@endforeach
-	<h2>{{$list}}</h2>
+	<ul class="menu">
+		@foreach($danhmucs as $danhmuc)
+  		<li><a href="/">{{$danhmuc->tendanhmuc}}</a>
+			<ul>
+				@foreach($danhmuc->listsanpham() as $sanpham)
+					<li><a href="#">{{$sanpham->tensanpham}}</a></li>
+				@endforeach	
+			</ul>
+  		</li>
+		@endforeach	
+	</ul>
 @stop
+
+
